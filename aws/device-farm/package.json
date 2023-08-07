@@ -1,0 +1,15 @@
+{
+  "name": "device-farm",
+  "version": "1.0.0",
+  "description": "AWS Device Farm Example",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-device-farm": "^3.386.0",
+    "selenium-webdriver": "^4.11.1"
+  }
+}
