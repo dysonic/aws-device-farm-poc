@@ -4,7 +4,12 @@
   "description": "AWS Device Farm Example",
   "main": "example.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./example.mjs",
+    "s3:msd:xxx": "aws s3 cp /tmp/mymsd-client.zip s3://awsdevicefarmpoc/mymsd-client.zip",
+    "s3": "aws s3 sync ../../dist s3://awsdevicefarmpoc",
+    "s3:msd": "aws s3 sync /Users/dysonic/Projects/MSD/mymsd/src/main/client/dist s3://awsdevicefarmpoc",
+    "zip:msd": "rm -f /tmp/mymsd-client.zip && zip -r /tmp/mymsd-client.zip -q /Users/dysonic/Projects/MSD/mymsd/src/main/client/dist",
+    "zip:msd:info": "zipinfo -h /tmp/mymsd-client.zip"
   },
   "author": "",
   "license": "ISC",

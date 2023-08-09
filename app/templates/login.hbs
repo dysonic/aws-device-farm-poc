@@ -1,0 +1,102 @@
+{{page-title "Login"}}
+
+<h1>Login</h1>
+
+<form>
+  <fieldset>
+    <legend>Log in</legend>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <label for="username">Client Number</label>
+      </div>
+      <div class="col-sm-12 col-md">
+        <Input
+          type="text"
+          id="Input-clientNumber"
+          placeholder="123456789"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          min="0"
+          max="999999999"
+          maxlength="9"
+          required
+          autocomplete="off"
+          @value={{this.clientNumber}}
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <label for="username">PIN</label>
+      </div>
+      <div class="col-sm-12 col-md">
+        <Input
+          type="text"
+          id="pin"
+          placeholder="****"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="4"
+          required
+          autocomplete="off"
+          @value={{this.pin}}
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <label for="username">Date of birth</label>
+      </div>
+      <div class="col-sm-12 col-md">
+        <Input
+          type="text"
+          id="dob--day"
+          placeholder="DD"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          min="1"
+          max="31"
+          maxlength="2"
+          required
+          autocomplete="off"
+        />
+        <Input
+          type="text"
+          id="dob--month"
+          placeholder="MM"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          min="1"
+          max="12"
+          maxlength="2"
+          required
+          autocomplete="off"
+        />
+        <Input
+          type="text"
+          id="dob--year"
+          placeholder="YYYY"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          min="1980"
+          maxlength="4"
+          required
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <label for="username">Remember me</label>
+      </div>
+      <div class="col-sm-12 col-md">
+        <input type="checkbox" autocomplete="off" class="test-remember-me" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button type="button" class="test-loginButton primary">Log in</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

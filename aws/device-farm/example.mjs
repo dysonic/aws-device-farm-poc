@@ -36,6 +36,13 @@ const runExample = async (urlString) => {
     .withCapabilities({ browserName: "chrome" })
     .build();
 
+  // Listen to the JS Exceptions and register callbacks to process the exception details.
+  // https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#listen-to-js-exceptions
+  const cdpConnection = await driver.createCDPConnection("page");
+  await driver.onLogException(cdpConnection, function (event) {
+    console.log(event["exceptionDetails"]);
+  });
+
   console.log("New session created:", driver.getSession());
 
   // The website you want to test
