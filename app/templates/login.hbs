@@ -59,6 +59,7 @@
           maxlength="2"
           required
           autocomplete="off"
+          @value={{this.dobDay}}
         />
         <Input
           type="text"
@@ -71,6 +72,7 @@
           maxlength="2"
           required
           autocomplete="off"
+          @value={{this.dobMonth}}
         />
         <Input
           type="text"
@@ -82,6 +84,7 @@
           maxlength="4"
           required
           autocomplete="off"
+          @value={{this.dobYear}}
         />
       </div>
     </div>
@@ -90,12 +93,21 @@
         <label for="username">Remember me</label>
       </div>
       <div class="col-sm-12 col-md">
-        <input type="checkbox" autocomplete="off" class="test-remember-me" />
+        <Input
+          @type="checkbox"
+          @checked={{this.rememberMe}}
+          autocomplete="off"
+          class="test-remember-me"
+        />
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="test-loginButton primary">Log in</button>
+        <button
+          type="button"
+          class="test-loginButton primary"
+          {{on "click" this.login}}
+        >Log in</button>
       </div>
     </div>
   </fieldset>
